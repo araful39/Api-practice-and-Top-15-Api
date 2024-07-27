@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:mamun_api_practice/service_controller/api_service.dart';
+import 'package:mamun_api_practice/service_controller/classic_it_api.dart';
 
-class ProductDetail extends StatefulWidget {
-  const ProductDetail({super.key});
+class Product extends StatefulWidget {
+  const Product({super.key});
 
   @override
-  State<ProductDetail> createState() => _ProductDetailState();
+  State<Product> createState() => _ProductState();
 }
 
-class _ProductDetailState extends State<ProductDetail> {
-  ApiService apiService =ApiService();
+class _ProductState extends State<Product> {
+
   @override
   void initState() {
-    apiService.fetchProducts();
+    ClassicItApiService;
     super.initState();
   }
   @override
