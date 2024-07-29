@@ -40,12 +40,12 @@ class _ShowPage02State extends State<ShowPage02> {
 
 
 
-  ApiService _apiService=ApiService();
+  final ApiService _apiService=ApiService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Api 02"),centerTitle: true,
+        title: const Text("Api 02"),centerTitle: true,
       ),
       body: FutureBuilder<Model02>(
           future:futureMap,
@@ -61,7 +61,7 @@ class _ShowPage02State extends State<ShowPage02> {
                  mainAxisAlignment: MainAxisAlignment.center,
                  children: [
                    Text("Fact : ${snapshot.data!.fact.toString()}"),
-                   SizedBox(
+                   const SizedBox(
                      height: 10,
                    ),
                    Text("Random : ${snapshot.data!.length.toString()}")
@@ -71,7 +71,7 @@ class _ShowPage02State extends State<ShowPage02> {
            ),
          );
         }else{
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

@@ -15,12 +15,12 @@ class _ShowPage07State extends State<ShowPage07> {
     super.initState();
     ApiService().getApi07();
   }
-  ApiService _apiService=ApiService();
+  final ApiService _apiService=ApiService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Nationalize.io"),
+        title: const Text("Nationalize.io"),
         centerTitle: true,
       ),
       body: FutureBuilder(future: _apiService.getApi07(),
@@ -28,7 +28,7 @@ class _ShowPage07State extends State<ShowPage07> {
         if(snapshot.hasData){
           return GridView.builder(
             itemCount: snapshot.data!.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               itemBuilder: (context,index){
             return Padding(
               padding: const EdgeInsets.all(8.0),
@@ -42,7 +42,7 @@ class _ShowPage07State extends State<ShowPage07> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Country ID : ${snapshot.data![index].countryId}"),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Text("Probability : ${snapshot.data![index].probability}")
                     ],
                   ),
@@ -56,7 +56,7 @@ class _ShowPage07State extends State<ShowPage07> {
             child: Text(snapshot.hasError.toString()),
           );
         }else{
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

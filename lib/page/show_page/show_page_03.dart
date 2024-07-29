@@ -15,7 +15,7 @@ class _ShowPage03State extends State<ShowPage03> {
     super.initState();
     ApiService().getApi03();
   }
-  ApiService _apiService=ApiService();
+  final ApiService _apiService=ApiService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
