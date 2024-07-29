@@ -10,12 +10,12 @@ class ShowPage12 extends StatefulWidget {
 }
 
 class _ShowPage12State extends State<ShowPage12> {
-  ApiService _apiService=ApiService();
+  final ApiService _apiService=ApiService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Show Page 12"),
+        title: const Text("Show Page 12"),
         centerTitle: true,
       ),
       body: FutureBuilder<Model12>(
@@ -29,11 +29,11 @@ class _ShowPage12State extends State<ShowPage12> {
               trailing: Text(snapshot.data!.type.toString()),
             );
           }else if(snapshot.hasError){
-            return Text("Data not found");
+            return const Text("Data not found");
           }else{
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(
-                semanticsLabel: " Loding data",
+                semanticsLabel: " Loading data",
               ),
             );
           }

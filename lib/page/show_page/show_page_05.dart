@@ -11,18 +11,18 @@ class ShowPage05 extends StatefulWidget {
 
 class _ShowPage05State extends State<ShowPage05> {
   late Model05 list;
-  ApiService _apiService=ApiService();
+  final ApiService _apiService=ApiService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Show Page 04"),
+        title: const Text("Show Page 04"),
         centerTitle: true,
       ),
       body: FutureBuilder(future: _apiService.getApi05(),
           builder: (context,snapshot){
         if(snapshot.hasError){
-          return Center(
+          return const Center(
             child: Text("Error"),
           );
         }else if(snapshot.hasData){
@@ -43,7 +43,7 @@ class _ShowPage05State extends State<ShowPage05> {
             ),
           );
         }else{
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

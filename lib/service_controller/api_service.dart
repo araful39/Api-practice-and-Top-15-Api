@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'dart:html';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
@@ -22,7 +22,9 @@ class ApiService {
           data.map((item) => Model01.fromJson(item)).toList();
       return articlesList;
     } else {
-      print("Data not");
+      if (kDebugMode) {
+        print("Data not");
+      }
       throw Exception("data not found");
     }
   }
@@ -57,7 +59,9 @@ class ApiService {
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       Model05 data5 = Model05.fromJson(data);
-      print(data5.runtimeType);
+      if (kDebugMode) {
+        print(data5.runtimeType);
+      }
       return data5;
     } else {
       throw Exception("Data not found Raju");
@@ -90,7 +94,9 @@ class ApiService {
           data.map((item) => Model07.fromJson(item)).toList();
       return articlesList07;
     } else {
-      print("Data not");
+      if (kDebugMode) {
+        print("Data not");
+      }
       throw Exception("data not found");
     }
   }
@@ -163,7 +169,9 @@ class ApiService {
     // print(response.statusCode);
     if (response.statusCode == 200) {
       var decode = jsonDecode(response.body);
-      print(decode.runtimeType);
+      if (kDebugMode) {
+        print(decode.runtimeType);
+      }
       Model13 result = Model13.fromJson(decode);
       return result;
     } else {

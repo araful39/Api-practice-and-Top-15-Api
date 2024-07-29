@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:mamun_api_practice/service_controller/api_service.dart';
 class ShowPage09 extends StatelessWidget {
   ShowPage09({super.key});
-  ApiService _apiService=ApiService();
+  final ApiService _apiService=ApiService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Show page 09"),
+        title: const Text("Show page 09"),
         centerTitle: true,
       ),
       body: FutureBuilder(future: _apiService.getApi09(),
@@ -22,18 +22,18 @@ class ShowPage09 extends StatelessWidget {
                     imageUrl: snapshot.data!.message.toString(),
                     progressIndicatorBuilder: (context, url, downloadProgress) =>
                         CircularProgressIndicator(value: downloadProgress.progress),
-                    errorWidget: (context, url, error) => Icon(Icons.error),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),
 
                   Text(snapshot.data!.status.toString())
                 ],),
               );
             }else if(snapshot.hasError){
-              return Center(
+              return const Center(
                 child: Text(" Data not found") ,
               );
             }else{
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             }

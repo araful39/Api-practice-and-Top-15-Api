@@ -9,12 +9,12 @@ class ShowPage08 extends StatefulWidget {
 }
 
 class _ShowPage08State extends State<ShowPage08> {
-  ApiService _apiService=ApiService();
+  final ApiService _apiService=ApiService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Show Page 08"),
+        title: const Text("Show Page 08"),
         centerTitle: true,
       ),
       body: FutureBuilder(future: _apiService.getApi08(),
@@ -30,7 +30,7 @@ class _ShowPage08State extends State<ShowPage08> {
                 height: 200,
                 width: 200,
 
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.teal,
                   shape: BoxShape.circle
 
@@ -53,9 +53,9 @@ class _ShowPage08State extends State<ShowPage08> {
             );
           });
         }else if(snapshot.hasError){
-          return Text("Data not found");
+          return const Text("Data not found");
         }else{
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

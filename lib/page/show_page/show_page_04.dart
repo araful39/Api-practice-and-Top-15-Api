@@ -14,7 +14,7 @@ class _ShowPage04State extends State<ShowPage04> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Show Page 04"),
+        title: const Text("Show Page 04"),
         centerTitle: true,
       ),
       body: FutureBuilder(future: _apiService.getApi04(),
@@ -43,9 +43,9 @@ class _ShowPage04State extends State<ShowPage04> {
             ),
           );
         }else if(snapshot.hasError){
-          return Text("Data not found");
+          return const Text("Data not found");
         }else{
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

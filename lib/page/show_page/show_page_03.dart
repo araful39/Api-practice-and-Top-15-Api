@@ -20,7 +20,7 @@ class _ShowPage03State extends State<ShowPage03> {
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
-  title: Text("Api 03"),
+  title: const Text("Api 03"),
   centerTitle: true,
 ),
       body:FutureBuilder(future: _apiService.getApi03(),
@@ -57,7 +57,7 @@ appBar: AppBar(
         }else if (snapshot.hasError){
           return Text(snapshot.hasError.toString());
         }else{
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

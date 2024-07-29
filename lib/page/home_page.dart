@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage01()));
+                                builder: (context) => const ShowPage01()));
                       },
                       child: const Text("Public Api 01")),
                   ElevatedButton(
@@ -56,12 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage02()));
+                                builder: (context) => const ShowPage02()));
                       },
-                      child: Text("Cat Facts Api 02")),
+                      child: const Text("Cat Facts Api 02")),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -73,21 +73,21 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage03()));
+                                builder: (context) => const ShowPage03()));
                       },
-                      child: Text("CoinDesk Api 03")),
+                      child: const Text("CoinDesk Api 03")),
                   ElevatedButton(
                       onPressed: () {
                         ApiService().getApi04();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage04()));
+                                builder: (context) => const ShowPage04()));
                       },
-                      child: Text("Bored Api 04")),
+                      child: const Text("Bored Api 04")),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -99,21 +99,21 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage05()));
+                                builder: (context) => const ShowPage05()));
                       },
-                      child: Text("Agify.io Api 05")),
+                      child: const Text("Agify.io Api 05")),
                   ElevatedButton(
                       onPressed: () {
                         ApiService().getApi06();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage06()));
+                                builder: (context) => const ShowPage06()));
                       },
-                      child: Text(" Genderize.io Api 06")),
+                      child: const Text(" Genderize.io Api 06")),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -124,21 +124,21 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage07()));
+                                builder: (context) => const ShowPage07()));
                       },
-                      child: Text("Nationalize Api 07")),
+                      child: const Text("Nationalize Api 07")),
                   ElevatedButton(
                       onPressed: () {
                         ApiService().getApi08();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage08()));
+                                builder: (context) => const ShowPage08()));
                       },
-                      child: Text("Cat Facts Api 08")),
+                      child: const Text("Cat Facts Api 08")),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -152,19 +152,19 @@ class _MyHomePageState extends State<MyHomePage> {
                             MaterialPageRoute(
                                 builder: (context) => ShowPage09()));
                       },
-                      child: Text("DogsApi 09")),
+                      child: const Text("DogsApi 09")),
                   ElevatedButton(
                       onPressed: () {
                         ApiService().getApi10();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPaga10()));
+                                builder: (context) => ShowPage10()));
                       },
-                      child: Text("IPify Api 10")),
+                      child: const Text("IPify Api 10")),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -175,19 +175,19 @@ class _MyHomePageState extends State<MyHomePage> {
                         // ApiService().getApi11();
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>ShowPage01()));
                       },
-                      child: Text("IPinfo Api 11")),
+                      child: const Text("IPinfo Api 11")),
                   ElevatedButton(
                       onPressed: () {
                         ApiService().getApi12();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage12()));
+                                builder: (context) => const ShowPage12()));
                       },
-                      child: Text("Jokes Api 12")),
+                      child: const Text("Jokes Api 12")),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -199,24 +199,24 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ShowPage13()));
+                                builder: (context) => const ShowPage13()));
                       },
-                      child: Text("RandomUser Api 13")),
+                      child: const Text("RandomUser Api 13")),
                   ElevatedButton(
                       onPressed: () {
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>ShowPage02()));
                       },
-                      child: Text("Universities List Api 14")),
+                      child: const Text("Universities List Api 14")),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
                   onPressed: () {
                     // Navigator.push(context, MaterialPageRoute(builder: (context)=>ShowPage02()));
                   },
-                  child: Text("Zippopotam Api 15")),
+                  child: const Text("Zippopotam Api 15")),
             ],
           ),
         ));

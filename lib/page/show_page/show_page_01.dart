@@ -49,16 +49,16 @@ ApiService apiService=ApiService();
                                 ],
                               ),
                             ),
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
                             Text(articleList[index].auth.toString()),
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
 
                   Text(articleList[index].hTTPS.toString(),),
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
                             Text(articleList[index].category.toString()),
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
                             Expanded(child: Text("Link : ${articleList[index].link.toString()}")),
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
 
                             Expanded(child: Text("Description : ${articleList[index].description.toString()}"))
                           ],
@@ -66,11 +66,11 @@ ApiService apiService=ApiService();
                       ),
                     ),
                   );
-                }, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),);
+                }, gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),);
             }else if(snapshot.hasError){
-              return Text("Data note, Api problem");
+              return const Text("Data note, Api problem");
             }else{
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             }
           })
     );
