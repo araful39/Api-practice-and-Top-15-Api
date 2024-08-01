@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:mamun_api_practice/page/show_page/show_paga_07.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_02.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_03.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_04.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_05.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_06.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_08.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_09.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_10.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_12.dart';
-import 'package:mamun_api_practice/page/show_page/show_page_13.dart';
-
-import 'package:mamun_api_practice/page/show_page/show_page_01.dart';
 import 'package:mamun_api_practice/service_controller/api_service.dart';
+import 'package:mamun_api_practice/view/show_page/show_paga_07.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_01.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_02.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_03.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_04.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_05.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_06.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_08.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_09.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_10.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_12.dart';
+import 'package:mamun_api_practice/view/show_page/show_page_13.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});

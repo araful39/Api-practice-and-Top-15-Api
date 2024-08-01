@@ -1,4 +1,27 @@
-class ProductModel {
+class ProductListModel {
+  List<Products>? products;
+
+  ProductListModel({this.products});
+
+  ProductListModel.fromJson(Map<String, dynamic> json) {
+    if (json['products'] != null) {
+      products = <Products>[];
+      json['products'].forEach((v) {
+        products!.add(new Products.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.products != null) {
+      data['products'] = this.products!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Products {
   int? productId;
   int? categoryId;
   int? subCategoryId;
@@ -12,7 +35,7 @@ class ProductModel {
   String? stock;
   int? rating;
 
-  ProductModel(
+  Products(
       {this.productId,
         this.categoryId,
         this.subCategoryId,
@@ -26,7 +49,7 @@ class ProductModel {
         this.stock,
         this.rating});
 
-  ProductModel.fromJson(Map<String, dynamic> json) {
+  Products.fromJson(Map<String, dynamic> json) {
     productId = json['productId'];
     categoryId = json['category_id'];
     subCategoryId = json['sub_category_id'];
