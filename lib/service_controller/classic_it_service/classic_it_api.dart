@@ -7,26 +7,22 @@ import 'package:mamun_api_practice/model/product_model.dart';
 
 class ClassicItApiService {
   String baseUrl = "https://cit-ecommerce-codecanyon.bandhantrade.com";
+
 // log In
-  static  loginApi(String email,String pass) async {
-    print(" ${email.toString()} && ${pass.toString()}");
-    String baseUrl = "https://cit-ecommerce-codecanyon.bandhantrade.com";
-    Response response = await http.post(Uri.parse('$baseUrl/api/login'),
-        body: {'Email_phone': email, 'password': pass});
-    if (response.statusCode == 200) {
-      log("Response:${response.runtimeType}");
-      return true;
-    }else{
-      return false;
-    }
+    loginApi(String email, String pass) async {
+   try{
+
+     Response response = await http.post(Uri.parse('$baseUrl/api/login'),
+         body: {"email_phone": email, "password": pass});
+
+     if (response.statusCode == 200) {
+       return true;
+     }
+   }
+   catch (e){
+log(e.toString());
+   } return false;
   }
-
-
-
-
-
-
-
 
   //fetch Product
   static fetchProducts() async {

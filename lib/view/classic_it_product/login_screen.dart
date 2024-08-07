@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mamun_api_practice/service_controller/classic_it_service/classic_it_api.dart';
+import 'package:mamun_api_practice/view/flatzi_screen/flatzi_product_screen.dart';
 import 'package:mamun_api_practice/view/home_page.dart';
 
 class ClassicItLoginScreen extends StatefulWidget {
@@ -13,6 +14,8 @@ class ClassicItLoginScreen extends StatefulWidget {
 class _ClassicItLoginScreenState extends State<ClassicItLoginScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
+  bool isLoading = false;
+  ClassicItApiService classicItApiService = ClassicItApiService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,26 +45,36 @@ class _ClassicItLoginScreenState extends State<ClassicItLoginScreen> {
               ),
               SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(
-                    onPressed: () async{
-                      var isLogin =await ClassicItApiService.loginApi(
-                          emailController.text, passController.text);
-                      if (isLogin) {
-                        print(isLogin.runtimeType);
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HomePage()));
-                      } else {
-                        print(isLogin.runtimeType);
+                child:  ElevatedButton(
+                        onPressed: () async {
+                          setState(() {
+                            isLoading = true;
+                          });
+                          bool isLogin = await classicItApiService.loginApi(
+                              emailController.text, passController.text);
+                          if (isLogin) {
 
-                        ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                                content:
-                                    Text("Please Correct Email Or Password")));
-                      }
-                    },
-                    child: const Text("Log In")),
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                    const FlatziProductScreen()));
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text("Login Successful!")));
+
+                                } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content: Text(
+                                        "Please Correct Email Or Password")));
+                          }
+                          setState(() {
+                            isLoading = false; // Set loading after API call
+                          });
+                        },
+                        child:isLoading == true
+                            ? const CircularProgressIndicator()
+                            : const Text("Log In")),
               )
             ],
           ),

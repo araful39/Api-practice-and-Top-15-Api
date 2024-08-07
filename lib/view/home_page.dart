@@ -36,8 +36,8 @@ class _HomePageState extends State<HomePage> {
           centerTitle: true,
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: ListView(
+
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
