@@ -20,6 +20,7 @@ class FlatziProductsApi {
        myData.add(flatziProdutsModel);
      }
      log("${myData.length}");
+     print("MyData: ${myData.length}");
     return myData ;
 
 

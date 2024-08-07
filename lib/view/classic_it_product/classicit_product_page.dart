@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mamun_api_practice/model/product_model.dart';
-import 'package:mamun_api_practice/service_controller/classic_it_api.dart';
+import 'package:mamun_api_practice/service_controller/classic_it_service/classic_it_api.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ProductScreen extends StatefulWidget {

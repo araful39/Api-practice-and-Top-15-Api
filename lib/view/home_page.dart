@@ -13,14 +13,14 @@ import 'package:mamun_api_practice/view/show_page/show_page_10.dart';
 import 'package:mamun_api_practice/view/show_page/show_page_12.dart';
 import 'package:mamun_api_practice/view/show_page/show_page_13.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     // TODO: implement initState
