@@ -8,10 +8,11 @@ import 'package:mamun_api_practice/model/product_model.dart';
 class ClassicItApiService {
   String baseUrl = "https://cit-ecommerce-codecanyon.bandhantrade.com";
 // log In
-  static loginApi(String email,String pass) async {
+  static  loginApi(String email,String pass) async {
+    print(" ${email.toString()} && ${pass.toString()}");
     String baseUrl = "https://cit-ecommerce-codecanyon.bandhantrade.com";
     Response response = await http.post(Uri.parse('$baseUrl/api/login'),
-        body: {'email_phone': email, 'password': pass});
+        body: {'Email_phone': email, 'password': pass});
     if (response.statusCode == 200) {
       log("Response:${response.runtimeType}");
       return true;

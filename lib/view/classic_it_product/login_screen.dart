@@ -44,19 +44,22 @@ class _ClassicItLoginScreenState extends State<ClassicItLoginScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                     onPressed: () async{
-
-
-                 var isLogin=  ClassicItApiService.loginApi(
+                      var isLogin =await ClassicItApiService.loginApi(
                           emailController.text, passController.text);
-                 if(isLogin==true){
-                   await Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomePage()));
-           
-                 }else{
-                   ScaffoldMessenger.of(context).showSnackBar(
-                         const SnackBar(content: Text("Please Correct Email Or Password"))
-                   );
-                 }
+                      if (isLogin) {
+                        print(isLogin.runtimeType);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HomePage()));
+                      } else {
+                        print(isLogin.runtimeType);
 
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content:
+                                    Text("Please Correct Email Or Password")));
+                      }
                     },
                     child: const Text("Log In")),
               )
